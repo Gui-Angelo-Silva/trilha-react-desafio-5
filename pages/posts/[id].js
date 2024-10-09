@@ -13,7 +13,6 @@ import Header from '../../components/Header';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
 
-
 const components = {
   a: CustomLink,
   Head,
@@ -61,7 +60,6 @@ export default function PostPage({
 export const getServerSideProps = async ({ params }) => {
   const globalData = getGlobalData();
   const posts = await getPostBySlug(params.id);
- 
 
   return {
     props: {
@@ -70,4 +68,3 @@ export const getServerSideProps = async ({ params }) => {
     },
   };
 };
-
